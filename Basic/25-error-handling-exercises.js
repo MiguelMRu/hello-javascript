@@ -5,8 +5,20 @@ https://www.youtube.com/live/8p6SLAIgwZI?si=MS9o7qIhezx9NTQX&t=902
 */
 
 // 1. Captura una excepción utilizando try-catch
-
 // 2. Captura una excepción utilizando try-catch y finally
+
+let myObject
+
+
+try{
+    console.log(myObject.email)
+    console.log("Finaliza la ejecucion sin errores")
+} catch{
+    console.log("Se ha producido un error")
+}finally{
+    console.log("Esta paerte se ejecuta")
+}
+
 
 // 3. Lanza una excepción genérica
 
