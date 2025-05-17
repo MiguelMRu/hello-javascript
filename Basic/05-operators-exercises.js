@@ -1,7 +1,6 @@
 /*
-Clase 2 en vídeo | 17/07/2024
-Tipos de datos, operadores y strings
-https://www.youtube.com/live/euVbF1eatEY?si=nHS3QznAlA_C39NK&t=808
+Clase 20 - Ejercicios: Operadores
+Vídeo: https://youtu.be/1glVfFxj8a4?t=6458
 */
 
 // 1. Crea una variable para cada operación aritmética
@@ -9,7 +8,7 @@ https://www.youtube.com/live/euVbF1eatEY?si=nHS3QznAlA_C39NK&t=808
 // 2. Crea una variable para cada tipo de operación de asignación,
 //    que haga uso de las variables utilizadas para las operaciones aritméticas
 
-// 3. Imprime 5 comparaciones verdades con diferentes operadores de comparación
+// 3. Imprime 5 comparaciones verdaderas con diferentes operadores de comparación
 
 // 4. Imprime 5 comparaciones falsas con diferentes operadores de comparación
 

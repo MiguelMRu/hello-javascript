@@ -1,7 +1,6 @@
 /*
-Clase 4 en vídeo | 31/07/2024
-Mapas, bucles y funciones
-https://www.youtube.com/live/xg1GeHKiNzU?si=oiWHK8bDTZ1c98hF&t=885
+Clase 29 - Bucles
+Vídeo: https://youtu.be/1glVfFxj8a4?t=11575
 */
 
 // Loops o bucles
@@ -40,17 +39,17 @@ do {
 
 // for of
 
-myArray = [1, 2, 3, 4]
+const myArray = [1, 2, 3, 4]
 
-mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.com"])
+const mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.com"])
 
-myMap = new Map([
+const myMap = new Map([
     ["name", "Brais"],
     ["email", "braismoure@mouredev.com"],
     ["age", 37]
 ])
 
-myString = "¡Hola, JavaScript!"
+const myString = "¡Hola, JavaScript!"
 
 for (let value of myArray) {
     console.log(value)
