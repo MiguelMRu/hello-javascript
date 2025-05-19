@@ -36,14 +36,14 @@ const handler = {
     name: "Brais",
     greeting: function () {
         console.log(`Hola, ${this.name}`) //al no pasar el nombre por parametro le pones el this para hacer referencia al name del objeto
-    },
-    arrowGreeting: () => { // crea su propio contextos de this por lo que no puede hacer referencia al objeto por lo que es undefined
-        console.log(`Hola, ${this.name}`)
     }
+   /* arrowGreeting: () => { // crea su propio contextos de this por lo que no puede hacer referencia al objeto por lo que es undefined
+        console.log(`Hola, ${this.name}`)
+    }*/
 }
 
-handler.greeting()
-handler.arrowGreeting();
+handler.greeting();
+//handler.arrowGreeting();
 
 // IIFE (Expresión de Función Invocada Inmediatamente)
 //necesitan ";" antes porque cogen el contexto del fichero entero
@@ -58,7 +58,7 @@ handler.arrowGreeting();
 
 // Parámetros Rest (...)
 
-function sum(...numbers) {
+function sum(...numbers) {// al no saber cuantos parametros vas a necesitar le metes el parametros resy y te pasa un array 
     let result = 0
     for (let number of numbers) {
         result += number
@@ -78,6 +78,8 @@ function sumWithSpread(a, b, c) {
 
 console.log(sumWithSpread(1, 2, 3)) // Sin Spread
 console.log(sumWithSpread(...numbers)) // Con Spread
+
+//El spread lo que hace es desenpaquetar la array, es decir los elementos los convierte en individuales
 
 // Closures (Clausuras)
 
@@ -106,6 +108,9 @@ function factorial(n) {
 
 console.log(factorial(5))
 
+//funcion que se llama si misma para realizar una tarea, se podria decir que es como un bucle, 
+// se debe poner una condución para terminar la ejecucion
+
 // Funciones parciales
 
 function partialSum(a) {
@@ -114,8 +119,8 @@ function partialSum(a) {
     }
 }
 
-const sumWith = partialSum(4)
-console.log(sumWith(2, 3))
+const sumWith = partialSum(4)// esta parte es estatica es decir tienes siemopre el 4
+console.log(sumWith(2, 3)) // al 4 guardadoe en la constante lse sumas eston numeros con utilizando la fucion suma
 console.log(sumWith(1, 2))
 
 // Currying
@@ -136,7 +141,7 @@ console.log(sumC(3))
 console.log(sumC(4))
 console.log(sumAB(5)(7))
 
-// Callbacks
+// Callbacks, son basicamente funciones que se ejecutan de forma parcial ya que tienen otra funcion por parametro
 
 function processData(data, callback) {
     const result = sum(...data)
