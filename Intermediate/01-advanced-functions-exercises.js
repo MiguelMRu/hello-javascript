@@ -83,15 +83,74 @@ counter.getValue()
 // 5. Crea una función sumManyTimes(multiplier, ...numbers) que primero sume todos los números (usando parámetros Rest) 
 // y luego multiplique el resultado por multiplier
 
+function sumManyTimes(multiplier, ...numbers){
+    let result = 0
+    for (let number of numbers) {
+        result += number
+    }
+    return result * multiplier
 
+}
 
+console.log(sumManyTimes(5,2,2))
 
 // 6. Crea un Callback que se invoque con el resultado de la suma de todos los números que se le pasan a una función
 
+function callbackSum(numbers,callback){
+    let result = 0
+    for (let number of numbers){
+        result += number
+    }
+    callback(result)
+    } 
+    
+
+
+callbackSum([1,2,4], (result) =>{
+    console.log(`La suma de los numeros es: ${result}`)
+})
+
 // 7. Desarrolla una función parcial
+
+function partiaMultiply(a) {
+    return function (b, c) {
+        return multiply(a, b, c)
+    }
+}
+
+const multiplyWith = partiaMultiply(4)// esta parte es estatica es decir tienes siemopre el 4
+console.log(multiplyWith(2, 3)) 
+console.log(multiplyWith(1, 2))
+
 
 // 8. Implementa un ejemplo que haga uso de Spread
 
+const restNumbers = [5,2,1,4,5,32]
+
+function rest(...numbers){
+    let result = 100
+    numbers.forEach((number) =>
+        result -= number
+    )
+    return result
+}
+
+console.log(rest(...restNumbers))
+
 // 9. Implementa un retorno implícito
+const retornoimplicito = (a,b)=> a-b
+
+console.log(retornoimplicito(5,4))
 
 // 10. Haz uso del this léxico
+
+const person = {
+    name: 'Miguel',
+    apellidos: 'Mateos Ruiz',
+    fullName: function(){
+        console.log(`Nombre completo: ${this.name} ${this.apellidos}`)
+    }
+    
+}
+
+person.fullName()
