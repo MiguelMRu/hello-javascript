@@ -58,7 +58,28 @@ interseccion.forEach(element => console.log(element))
 
 // 7. Crea un mapa que almacene información se usuarios (nombre, edad y email) e itera los datos
 
+let myMap = new Map()
+
+myMap.set(1, {
+    name: 'Miguel',
+    surname: 'Mateos Ruiz',
+    age: 26,
+    email: 'miguelmateosruiz@gmail.com'
+})
+
+myMap.set(2, {
+    name: 'Dante',
+    surname: 'Tejedor Mateos',
+    age: 0,
+    email: 'dantetejedormateos@gmail.com'
+})
+
+myMap.forEach((value, key) => console.log(`Valor: ${value} key: ${key}`))
+
 // 8. Dado el mapa anterior, crea un array con los nombres
+
+let names = [myMap.get(1)]
+console.log(names)
 
 // 9. Dado el mapa anterior, obtén un array con los email de los usuarios mayores de edad y transfórmalo a un set
 

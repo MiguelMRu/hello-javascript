@@ -8,6 +8,7 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=7639
 // - Prototipos y Herencia
 
 // Prototipos
+//ya no es algo habitual, es una forma de heredar 
 
 let person = {
     name: "Brais",
@@ -29,7 +30,7 @@ person.sayAge()
 
 // Herencia
 
-let programmer = Object.create(person)
+let programmer = Object.create(person) // crea un nuevo objeto a partir de otro ya existente
 programmer.language = "JavaScript"
 
 programmer.name = "MoureDev"

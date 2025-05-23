@@ -25,7 +25,7 @@ person.sayAge = function () {
 person.sayAge()
 
 // - Abstracción
-
+// es una clase principal quye se utiliza para crear otras más especificas
 class Animal {
     constructor(name) {
         if (new.target === Animal) {
@@ -67,7 +67,7 @@ const dog = new Dog("MoureDog")
 console.log(dog)
 dog.makeSound()
 
-// - Mixins
+// - Mixins tecnica para compartir funcionalidad entre diferentes clases pero sin utilizar herencia
 
 const FlyMixin = {
     fly() {
